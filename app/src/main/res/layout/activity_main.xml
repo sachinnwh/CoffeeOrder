@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/coffee"
+    android:background="#cee8ff"
     android:scaleType="centerCrop"
     >
 <LinearLayout
@@ -12,7 +12,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-
+    <EditText
+        android:id="@+id/name_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:hint="Name"
+        android:paddingTop="20dp"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,8 +36,14 @@
         android:text="Whipped Cream"
         android:layout_marginLeft="16dp"
         android:padding="16dp"
-        android:onClick="onCheckboxClicked"
         />
+    <CheckBox
+        android:id="@+id/choclate_cream_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choclate Cream"
+        android:layout_marginLeft="16dp"
+        android:padding="16dp"/>
     <TextView
 
         android:layout_width="wrap_content"
@@ -55,7 +68,7 @@
             android:id="@+id/button2"
             android:layout_margin="16dp"
             android:onClick="decrement"
-            android:background="#d18f62"/>
+            android:background="#3e8cd2"/>
 
         <TextView
             android:id="@+id/quantity_text_view"
@@ -73,7 +86,7 @@
             android:text="+"
             android:layout_margin="16dp"
             android:onClick="increment"
-            android:background="#d18f62"
+            android:background="#3e8cd2"
             />
     </LinearLayout>
     <TextView
@@ -103,7 +116,7 @@
         android:layout_marginLeft="0dp"
         android:textColor="@android:color/black"
         android:onClick="submitOrder"
-        android:background="@android:color/holo_purple"
+        android:background="#3e8cd2"
         android:elegantTextHeight="false" />
 
 </LinearLayout>
