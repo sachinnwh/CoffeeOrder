@@ -3,6 +3,7 @@ package com.example.sachinchoudhary.coffee;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,9 +24,12 @@ public class MainActivity extends AppCompatActivity {
             quantity--;
         display(quantity);
     }
-    public void submitorder(View view)
+    public void onCheckboxClicked(View view){}
+    public void submitOrder(View view)
     {
-        String priceMessage="Name:sachin choudhary\n " + "Total: Rs." + quantity*5 + "\n Thank You!";
+        CheckBox whippedCreamCheckBox=(CheckBox) findViewById(R.id.whipped_cream_checkbox);
+        boolean hasWhippedCream=whippedCreamCheckBox.isChecked();
+        String priceMessage="Name:Sachin Choudhary\n " + " Add whipped cream?" + hasWhippedCream + "\nQuantity:" + quantity + "\nTotal: Rs." + quantity*5 + "\n Thank You!";
         orderSummary(priceMessage);
     }
     private void display(int number){
